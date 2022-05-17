@@ -1,15 +1,18 @@
-let n=1;
-let isPrime = true;
+let n=15;
+//display all prime number from 2-n
 
-for(let i=2; i<n; i++) {
-    if(n%i == 0){
-        isPrime = false;
-        break;
+console.log(`The prime numbers between 0 and ${n} are:`);
+
+for (let i = 0; i <= n; i++) {
+    let isPrime = 1;
+    for (let j = 2; j*j < i; j++) {
+        if (i % j == 0) {
+            isPrime = 0;
+            break;
+        }
     }
-}
 
-if(isPrime) {
-    console.log(n +' is a prime number')
-} else {
-    console.log(n +' is not a prime number')
+    if (i > 1 && isPrime == 1) {
+        console.log(i);
+    }
 }
