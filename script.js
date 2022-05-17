@@ -1,19 +1,20 @@
-let n=5;
-let facFor=1;
-let facWhile=1;
+const n = 9;
 
-for(let i=n; i>0; i--) {
-    facFor = facFor*i;
+let n1For = 0, n2For = 1, nextTermFor;
+for (let i = 0; i < n; i++) {
+    nextTermFor = n1For + n2For;
+    n1For = n2For;
+    n2For = nextTermFor;
 }
 
-let i=n;
-while(i > 0) {
-    facWhile = facWhile*i;
-    i--;
+let n1While = 0, n2While = 1, nextTermWhile;
+let i=0;
+while (i < n) {
+    nextTermWhile = n1While + n2While;
+    n1While = n2While;
+    n2While = nextTermWhile;
+    i++;
 }
 
-console.log("!"+n +" = " +facFor +" For loop")
-console.log("!"+n +" = " +facWhile +" While loop")
-
-
-
+console.log('For:   Fibonacci(' +n +') = ' + n1For);
+console.log('While: Fibonacci(' +n +') = ' + n1While);
