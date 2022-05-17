@@ -1,24 +1,19 @@
-let netIncome = 999999;
-let tax;
+let n=5;
+let facFor=1;
+let facWhile=1;
 
-if(netIncome < 150000) {
-    tax = 0;
-} else if(netIncome < 300000) {
-    tax = (netIncome - 150000)*5/100;
-} else if(netIncome < 500000) {
-    tax = (150000)*5/100 + (netIncome - 300000)*10/100;
-} else if(netIncome < 750000) {
-    tax = (150000)*5/100 + (200000)*10/100 + (netIncome - 500000)*15/100;
-} else if(netIncome < 1000000) {
-    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (netIncome - 750000)*20/100;
-} else if(netIncome < 2000000) {
-    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (netIncome - 1000000)*25/100;
-} else if(netIncome < 5000000) {
-    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (netIncome - 2000000)*30/100;
-} else {
-    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (3000000)*30/100 + (netIncome - 5000000)*35/100;
+for(let i=n; i>0; i--) {
+    facFor = facFor*i;
 }
 
-console.log('You have to pay ' + tax);
+let i=n;
+while(i > 0) {
+    facWhile = facWhile*i;
+    i--;
+}
+
+console.log("!"+n +" = " +facFor +" For loop")
+console.log("!"+n +" = " +facWhile +" While loop")
+
 
 
