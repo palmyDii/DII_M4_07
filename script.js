@@ -1,23 +1,24 @@
-let score = 55;
-let grade;
-if (score >= 80) {
-    grade = 'A';
-} else if (score >= 75) {
-    grade = 'B+';
-} else if (score >= 70) {
-    grade = 'B';
-} else if (score >= 65) {
-    grade = 'C+';
-} else if (score >= 60) {
-    grade = 'C';
-} else if (score >= 55) {
-    grade = 'D+';
-} else if (score >= 50) {
-    grade = 'D';
+let netIncome = 999999;
+let tax;
+
+if(netIncome < 150000) {
+    tax = 0;
+} else if(netIncome < 300000) {
+    tax = (netIncome - 150000)*5/100;
+} else if(netIncome < 500000) {
+    tax = (150000)*5/100 + (netIncome - 300000)*10/100;
+} else if(netIncome < 750000) {
+    tax = (150000)*5/100 + (200000)*10/100 + (netIncome - 500000)*15/100;
+} else if(netIncome < 1000000) {
+    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (netIncome - 750000)*20/100;
+} else if(netIncome < 2000000) {
+    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (netIncome - 1000000)*25/100;
+} else if(netIncome < 5000000) {
+    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (netIncome - 2000000)*30/100;
 } else {
-    grade = 'F'
+    tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (3000000)*30/100 + (netIncome - 5000000)*35/100;
 }
 
-console.log(grade + ' ' + score)
+console.log('You have to pay ' + tax);
 
 
