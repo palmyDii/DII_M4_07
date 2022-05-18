@@ -35,16 +35,29 @@ employee[4] = {
 }
 
 let sumSalary=0, averageAge=0, averageTax=0;
+
+sumSalary = findSum(employee, 'salary')
+averageAge = findAverage(employee, 'age')
 for(let i of employee) {
-    sumSalary += i.salary;
-    averageAge += i.age / employee.length;
+    averageTax += calTax(i.salary*12)
 }
 
+console.log(sumSalary +" " +averageAge +" " +averageTax)
 
-
-for(let i of employee) {
+function findSum (array, key) {
+    let sum = 0;
+    for(let i of array) {
+        sum += i[key];
+    }
+    return sum;
+}
+function findAverage (array, key) {
+    sum = findSum(array, key)
+    let avg = sum / array.length;
+    return avg;
+}
+function calTax (netIncome) {
     let tax=0;
-    let netIncome = i.salary *12;
     if(netIncome < 150000) {
         tax = 0;
     } else if(netIncome < 300000) {
@@ -62,10 +75,5 @@ for(let i of employee) {
     } else {
         tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (3000000)*30/100 + (netIncome - 5000000)*35/100;
     }
-    averageTax += tax / employee.length;
+    return tax / employee.length;
 }
-
-console.log(sumSalary +" " +averageAge +" " +averageTax)
-
-
-
