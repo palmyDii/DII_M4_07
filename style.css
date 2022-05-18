@@ -9,7 +9,7 @@
     margin: 20px;
     text-align: center;
 }
-#ok {
+#ok, #showDate {
     background-color: skyblue;
     color: black;
     border: 2px solid blue;
