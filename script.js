@@ -40,6 +40,8 @@ for(let i of employee) {
     averageAge += i.age / employee.length;
 }
 
+
+
 for(let i of employee) {
     let tax=0;
     let netIncome = i.salary *12;
@@ -60,7 +62,7 @@ for(let i of employee) {
     } else {
         tax = (150000)*5/100 + (200000)*10/100 + (250000)*15/100 + (250000)*20/100 + (1000000)*25/100 + (3000000)*30/100 + (netIncome - 5000000)*35/100;
     }
-    averageTax += tax;
+    averageTax += tax / employee.length;
 }
 
 console.log(sumSalary +" " +averageAge +" " +averageTax)
