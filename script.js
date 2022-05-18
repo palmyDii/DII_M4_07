@@ -7,10 +7,10 @@ ok.addEventListener('click', () => alert('let me see ...'));
 cancel.addEventListener('click', () => alert('not ok ...'));
 
 showDate.addEventListener('click', () => {
-    document.getElementById('emptySpace').innerText = Date();
+    document.getElementById('emptySpace').innerHTML = "<b>" +Date() +"</b>";
 });
 showDate.addEventListener('dblclick', () => {
-    document.getElementById('emptySpace').innerText = "";
+    document.getElementById('emptySpace').innerHTML = '';
 });
 
 
